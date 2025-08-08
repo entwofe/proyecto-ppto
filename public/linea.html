@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Detalle Línea de Presupuesto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+    }
+    h1, h2 {
+      margin-top: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f5f5f5;
+    }
+    .volver {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: #1976d2;
+      text-decoration: none;
+    }
+    .volver:hover {
+      text-decoration: underline;
+    }
+    .coste {
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-top: 20px;
+    }
+    button {
+      padding: 8px 16px;
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 10px 10px 20px 0;
+    }
+    button:hover {
+      background-color: #125ca1;
+    }
+    /* MODALES */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+      z-index: 10;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal .contenido {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      min-width: 300px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      position: relative;
+    }
+    .modal .cerrar {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .modal input, .modal select {
+      width: 100%;
+      margin: 10px 0;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <a class="volver" href="javascript:history.back()">⬅️ Volver</a>
+  <h1>🧾 Detalle de la línea <span id="linea-id"></span></h1>
+  <p><strong>Título:</strong> <span id="linea-titulo"></span></p>
+  <p><strong>Descripción:</strong> <span id="linea-descripcion"></span></p>
+
+  <h2>🛠 Tareas asociadas</h2>
+  <button onclick="abrirModal('tarea')">➕ Añadir tarea</button>
+  <table id="tabla-tareas">
+    <thead>
+      <tr>
+        <th>Descripción</th>
+        <th>Departamento</th>
+        <th>Tiempo fijo</th>
+        <th>Tiempo variable</th>
+        <th>Unidades</th>
+        <th>Tiempo total</th>
+        <th>Coste</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <h2>📦 Materiales asociados</h2>
+  <button onclick="abrirModal('material')">➕ Añadir material</button>
+  <table id="tabla-materiales">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Categoría</th>
+        <th>Cantidad</th>
+        <th>Unidad</th>
+        <th>Coste Unitario</th>
+        <th>Coste Total</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <p class="coste">💰 Coste total: <span id="coste-total">0.00</span> €</p>
+
+  <!-- Modal Tarea -->
+  <div class="modal" id="modal-tarea">
+    <div class="contenido">
+      <span class="cerrar" onclick="cerrarModal('tarea')">✖️</span>
+      <h3>➕ Añadir tarea</h3>
+      <form id="form-tarea">
+        <select id="select-tarea"></select>
+        <input type="number" id="unidades-tarea" placeholder="Unidades" required min="1" />
+        <button type="submit">Añadir</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Material -->
+  <div class="modal" id="modal-material">
+    <div class="contenido">
+      <span class="cerrar" onclick="cerrarModal('material')">✖️</span>
+      <h3>➕ Añadir material</h3>
+      <form id="form-material">
+        <select id="select-material"></select>
+        <input type="number" id="cantidad-material" placeholder="Cantidad" required step="0.01" min="0.01" />
+        <button type="submit">Añadir</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const idLinea = params.get("id");
+    const idPresupuesto = params.get("idPresupuesto");
+    document.getElementById("linea-id").textContent = idLinea;
+  
+    // -------- Helpers --------
+    const j = (sel) => document.querySelector(sel);
+    async function getJSON(url){ const r = await fetch(url); if(!r.ok) throw new Error(url+' -> '+r.status); return r.json(); }
+  
+    // -------- Carga cabecera de la línea --------
+    (async function initCabecera(){
+      try{
+        const lineas = await getJSON(`/api/lineas_presupuesto/${idPresupuesto}`);
+        const linea = lineas.find(l => String(l.id) === String(idLinea));
+        if(linea){
+          j("#linea-titulo").textContent = linea.titulo || '';
+          j("#linea-descripcion").textContent = linea.descripcion || '';
+        }
+      }catch(e){ console.error('Cabecera línea', e); }
+    })();
+  
+    // -------- Carga selects de los modales (maestros) --------
+    (async function initSelects(){
+      try{
+        const [tareasModelo, materialesModelo] = await Promise.all([
+          getJSON('/api/tareas_modelo'),
+          getJSON('/api/materiales_modelo')
+        ]);
+  
+        const selT = j('#select-tarea');
+        tareasModelo.forEach(t => {
+          const opt = document.createElement('option');
+          opt.value = t.id;
+          opt.textContent = `${t.descripcion} (${t.departamento})`;
+          selT.appendChild(opt);
+        });
+  
+        const selM = j('#select-material');
+        materialesModelo.forEach(m => {
+          const opt = document.createElement('option');
+          opt.value = m.id;
+          opt.textContent = `${m.nombre} (${m.categoria})`;
+          selM.appendChild(opt);
+        });
+      }catch(e){ console.error('Selects', e); }
+    })();
+  
+    // -------- Render tablas (resolviendo asociaciones + maestros) --------
+    async function cargarYRenderizarTablas(){
+      try{
+        let costeTotal = 0;
+  
+        // 1) Cargar asociaciones de la línea
+        const [lineaTareasAll, lineaMaterialesAll] = await Promise.all([
+          getJSON('/api/linea_tarea'),
+          getJSON('/api/linea_material')
+        ]);
+        const lineaTareas = (lineaTareasAll || []).filter(t => String(t.idLineaPresupuesto) === String(idLinea));
+        const lineaMateriales = (lineaMaterialesAll || []).filter(m => String(m.idLineaPresupuesto) === String(idLinea));
+  
+        // 2) Cargar maestros
+        const [tareasModelo, materialesModelo] = await Promise.all([
+          getJSON('/api/tareas_modelo'),
+          getJSON('/api/materiales_modelo')
+        ]);
+  
+        // 3) Resolver tareas
+        const tbodyT = j('#tabla-tareas tbody');
+        tbodyT.innerHTML = '';
+        for(const tRel of lineaTareas){
+          const tM = tareasModelo.find(x => String(x.id) === String(tRel.idTareaModelo));
+          if(!tM) continue;
+  
+          const tiempoFijo = Number(tM.tiempoFijo || 0);
+          const tiempoVarUd = Number(tM.tiempoVariablePorUnidad || 0);
+          const unidades = Number(tRel.unidades || 0);
+          const tiempoVariable = tiempoVarUd * unidades;
+          const tiempoTotal = tiempoFijo + tiempoVariable;
+  
+          // Si tienes coste por minuto por departamento en maestro:
+          const costeMin = Number(tM.costePorMinuto || 0);
+          const coste = tiempoTotal * costeMin;
+  
+          costeTotal += coste;
+  
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td>${tM.descripcion || ''}</td>
+            <td>${tM.departamento || '-'}</td>
+            <td>${tiempoFijo} min</td>
+            <td>${tiempoVariable} min</td>
+            <td>${unidades}</td>
+            <td>${tiempoTotal} min</td>
+            <td>${coste.toFixed(2)} €</td>
+          `;
+          tbodyT.appendChild(tr);
+        }
+  
+        // 4) Resolver materiales
+        const tbodyM = j('#tabla-materiales tbody');
+        tbodyM.innerHTML = '';
+        for(const mRel of lineaMateriales){
+          const mM = materialesModelo.find(x => String(x.id) === String(mRel.idMaterial));
+          if(!mM) continue;
+  
+          const cantidad = Number(mRel.cantidad || 0);
+          // Asumo campo precio unitario en maestro: precioUnitario (ajústalo si es otro nombre)
+          const pUnit = Number(mM.precioUnitario || mM.costeUnitario || 0);
+          const costeTotalMat = cantidad * pUnit;
+  
+          costeTotal += costeTotalMat;
+  
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td>${mM.nombre || ''}</td>
+            <td>${mM.categoria || '-'}</td>
+            <td>${cantidad}</td>
+            <td>${mM.unidadMedida || '-'}</td>
+            <td>${pUnit.toFixed(2)} €</td>
+            <td>${costeTotalMat.toFixed(2)} €</td>
+          `;
+          tbodyM.appendChild(tr);
+        }
+  
+        j('#coste-total').textContent = costeTotal.toFixed(2);
+      }catch(e){
+        console.error('Render tablas', e);
+      }
+    }
+  
+    // Lanzar render al cargar
+    document.addEventListener('DOMContentLoaded', cargarYRenderizarTablas);
+  
+    // -------- Modales --------
+    function abrirModal(tipo) {
+      document.getElementById('modal-' + tipo).style.display = 'flex';
+    }
+    function cerrarModal(tipo) {
+      document.getElementById('modal-' + tipo).style.display = 'none';
+      document.getElementById('form-' + tipo).reset();
+    }
+    window.abrirModal = abrirModal;
+    window.cerrarModal = cerrarModal;
+  
+    // -------- POST tarea --------
+    document.getElementById('form-tarea').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const idTareaModelo = parseInt(document.getElementById('select-tarea').value);
+      const unidades = parseInt(document.getElementById('unidades-tarea').value);
+      try{
+        await fetch('/api/linea_tarea', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ idLineaPresupuesto: parseInt(idLinea), idTareaModelo, unidades })
+        });
+        cerrarModal('tarea');
+        await cargarYRenderizarTablas(); // evita recargar toda la página
+        // location.reload(); // si prefieres recargar
+      }catch(err){
+        console.error(err);
+        alert("Error al añadir tarea");
+      }
+    });
+  
+    // -------- POST material --------
+    document.getElementById('form-material').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const idMaterial = parseInt(document.getElementById('select-material').value);
+      const cantidad = parseFloat(document.getElementById('cantidad-material').value);
+      try{
+        await fetch('/api/linea_material', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ idLineaPresupuesto: parseInt(idLinea), idMaterial, cantidad })
+        });
+        cerrarModal('material');
+        await cargarYRenderizarTablas();
+        // location.reload();
+      }catch(err){
+        console.error(err);
+        alert("Error al añadir material");
+      }
+    });
+  </script>
+  
+</body>
+</html>

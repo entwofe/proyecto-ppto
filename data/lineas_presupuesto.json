@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "idPresupuesto": 101,
+    "titulo": "Rótulo fachada LED",
+    "descripcion": "Rótulo luminoso 300x80cm con iluminación frontal"
+  },
+  {
+    "id": 2,
+    "idPresupuesto": 101,
+    "titulo": "Soporte metálico",
+    "descripcion": "Estructura de anclaje para fachada"
+  },
+  {
+    "id": 3,
+    "idPresupuesto": 102,
+    "titulo": "Vinilo interior escaparate",
+    "descripcion": "Vinilo opaco con impresión para interior de cristal"
+  },
+  {
+    "id": 1754678464608,
+    "idPresupuesto": 1754678444916,
+    "titulo": "mecanizado compo",
+    "descripcion": "composite rojo aportado por el cliente"
+  },
+  {
+    "id": 1754678469839,
+    "idPresupuesto": 1754678444916,
+    "titulo": "asdasd",
+    "descripcion": "asdas"
+  },
+  {
+    "id": 1754680234410,
+    "idPresupuesto": 101,
+    "titulo": "nueva line",
+    "descripcion": "yisus"
+  },
+  {
+    "id": 1754681098006,
+    "idPresupuesto": 1754681086107,
+    "titulo": "letrero composite",
+    "descripcion": "composite negro"
+  }
+]

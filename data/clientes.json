@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1,
+      "nombre": "Repsol",
+      "cif": "A12345678",
+      "email": "compras@repsol.com"
+    },
+    {
+      "id": 2,
+      "nombre": "Mahou",
+      "cif": "B87654321",
+      "email": "presupuestos@mahou.es"
+    },
+    {
+      "id": 3,
+      "nombre": "Coca-Cola",
+      "cif": "C24681012",
+      "email": "pedidos@coca-cola.com"
+    }
+  ]
+  

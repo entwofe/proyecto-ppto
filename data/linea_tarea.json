@@ -1,0 +1,242 @@
+[
+  {
+    "id": 5000,
+    "idLineaPresupuesto": 1003,
+    "idTareaModelo": 1012,
+    "unidades": 1
+  },
+  {
+    "id": 5001,
+    "idLineaPresupuesto": 1001,
+    "idTareaModelo": 1008,
+    "unidades": 3
+  },
+  {
+    "id": 5002,
+    "idLineaPresupuesto": 1002,
+    "idTareaModelo": 1026,
+    "unidades": 4
+  },
+  {
+    "id": 5003,
+    "idLineaPresupuesto": 1001,
+    "idTareaModelo": 1028,
+    "unidades": 4
+  },
+  {
+    "id": 5004,
+    "idLineaPresupuesto": 1002,
+    "idTareaModelo": 1020,
+    "unidades": 2
+  },
+  {
+    "id": 5005,
+    "idLineaPresupuesto": 1003,
+    "idTareaModelo": 1000,
+    "unidades": 4
+  },
+  {
+    "id": 5006,
+    "idLineaPresupuesto": 1003,
+    "idTareaModelo": 1026,
+    "unidades": 3
+  },
+  {
+    "id": 5007,
+    "idLineaPresupuesto": 1003,
+    "idTareaModelo": 1005,
+    "unidades": 4
+  },
+  {
+    "id": 5008,
+    "idLineaPresupuesto": 1002,
+    "idTareaModelo": 1005,
+    "unidades": 2
+  },
+  {
+    "id": 5009,
+    "idLineaPresupuesto": 1001,
+    "idTareaModelo": 1007,
+    "unidades": 2
+  },
+  {
+    "id": 5010,
+    "idLineaPresupuesto": 1001,
+    "idTareaModelo": 1015,
+    "unidades": 4
+  },
+  {
+    "id": 5011,
+    "idLineaPresupuesto": 1003,
+    "idTareaModelo": 1022,
+    "unidades": 3
+  },
+  {
+    "id": 5012,
+    "idLineaPresupuesto": 1001,
+    "idTareaModelo": 1007,
+    "unidades": 3
+  },
+  {
+    "id": 5013,
+    "idLineaPresupuesto": 1001,
+    "idTareaModelo": 1004,
+    "unidades": 4
+  },
+  {
+    "id": 5014,
+    "idLineaPresupuesto": 1001,
+    "idTareaModelo": 1028,
+    "unidades": 1
+  },
+  {
+    "id": 5015,
+    "idLineaPresupuesto": 1002,
+    "idTareaModelo": 1014,
+    "unidades": 3
+  },
+  {
+    "id": 5016,
+    "idLineaPresupuesto": 1002,
+    "idTareaModelo": 1025,
+    "unidades": 4
+  },
+  {
+    "id": 5017,
+    "idLineaPresupuesto": 1001,
+    "idTareaModelo": 1015,
+    "unidades": 3
+  },
+  {
+    "id": 5018,
+    "idLineaPresupuesto": 1001,
+    "idTareaModelo": 1022,
+    "unidades": 2
+  },
+  {
+    "id": 5019,
+    "idLineaPresupuesto": 1002,
+    "idTareaModelo": 1010,
+    "unidades": 1
+  },
+  {
+    "id": 5020,
+    "idLineaPresupuesto": 1003,
+    "idTareaModelo": 1005,
+    "unidades": 1
+  },
+  {
+    "id": 5021,
+    "idLineaPresupuesto": 1001,
+    "idTareaModelo": 1008,
+    "unidades": 1
+  },
+  {
+    "id": 5022,
+    "idLineaPresupuesto": 1001,
+    "idTareaModelo": 1026,
+    "unidades": 1
+  },
+  {
+    "id": 5023,
+    "idLineaPresupuesto": 1002,
+    "idTareaModelo": 1019,
+    "unidades": 1
+  },
+  {
+    "id": 5024,
+    "idLineaPresupuesto": 1002,
+    "idTareaModelo": 1024,
+    "unidades": 3
+  },
+  {
+    "id": 5025,
+    "idLineaPresupuesto": 1003,
+    "idTareaModelo": 1000,
+    "unidades": 4
+  },
+  {
+    "id": 5026,
+    "idLineaPresupuesto": 1002,
+    "idTareaModelo": 1004,
+    "unidades": 4
+  },
+  {
+    "id": 5027,
+    "idLineaPresupuesto": 1001,
+    "idTareaModelo": 1020,
+    "unidades": 2
+  },
+  {
+    "id": 5028,
+    "idLineaPresupuesto": 1002,
+    "idTareaModelo": 1027,
+    "unidades": 1
+  },
+  {
+    "id": 5029,
+    "idLineaPresupuesto": 1001,
+    "idTareaModelo": 1011,
+    "unidades": 4
+  },
+  {
+    "id": 1754675734360,
+    "idLineaPresupuesto": 101,
+    "idTareaModelo": null,
+    "unidades": 1
+  },
+  {
+    "id": 1754675853353,
+    "idLineaPresupuesto": 101,
+    "idTareaModelo": 1011,
+    "unidades": 2
+  },
+  {
+    "id": 1754675858312,
+    "idLineaPresupuesto": 101,
+    "idTareaModelo": 1023,
+    "unidades": 11
+  },
+  {
+    "id": 1754675865391,
+    "idLineaPresupuesto": 101,
+    "idTareaModelo": 1018,
+    "unidades": 22
+  },
+  {
+    "id": 1754676137091,
+    "idLineaPresupuesto": 101,
+    "idTareaModelo": 1016,
+    "unidades": 2
+  },
+  {
+    "id": 1754676789943,
+    "idLineaPresupuesto": 1,
+    "idTareaModelo": 1017,
+    "unidades": 33
+  },
+  {
+    "id": 1754676842586,
+    "idLineaPresupuesto": 3,
+    "idTareaModelo": 1016,
+    "unidades": 111
+  },
+  {
+    "id": 1754681197142,
+    "idLineaPresupuesto": 1,
+    "idTareaModelo": 1005,
+    "unidades": 1212
+  },
+  {
+    "id": 1754681221690,
+    "idLineaPresupuesto": 2,
+    "idTareaModelo": 1005,
+    "unidades": 333
+  },
+  {
+    "id": 1754681941788,
+    "idLineaPresupuesto": 2,
+    "idTareaModelo": 1005,
+    "unidades": 3222
+  }
+]

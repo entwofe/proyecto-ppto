@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1000,
+    "descripcion": "Montaje de estructura met\u00e1lica",
+    "departamento": "Montaje",
+    "costePorMinuto": 0.65,
+    "tiempoFijo": 12,
+    "tiempoVariablePorUnidad": 7
+  },
+  {
+    "id": 1001,
+    "descripcion": "Soldadura de soporte",
+    "departamento": "Pintura",
+    "costePorMinuto": 0.75,
+    "tiempoFijo": 7,
+    "tiempoVariablePorUnidad": 9
+  },
+  {
+    "id": 1002,
+    "descripcion": "Corte CNC de metacrilato",
+    "departamento": "Electricidad",
+    "costePorMinuto": 0.85,
+    "tiempoFijo": 8,
+    "tiempoVariablePorUnidad": 3
+  },
+  {
+    "id": 1003,
+    "descripcion": "Pintado base con esmalte",
+    "departamento": "Electricidad",
+    "costePorMinuto": 0.85,
+    "tiempoFijo": 7,
+    "tiempoVariablePorUnidad": 8
+  },
+  {
+    "id": 1004,
+    "descripcion": "Instalaci\u00f3n tira LED",
+    "departamento": "Fresadora",
+    "costePorMinuto": 1.0,
+    "tiempoFijo": 7,
+    "tiempoVariablePorUnidad": 10
+  },
+  {
+    "id": 1005,
+    "descripcion": "Montaje marco frontal",
+    "departamento": "Taller",
+    "costePorMinuto": 0.6,
+    "tiempoFijo": 15,
+    "tiempoVariablePorUnidad": 6
+  },
+  {
+    "id": 1006,
+    "descripcion": "Fresado de contorno exterior",
+    "departamento": "Pintura",
+    "costePorMinuto": 0.75,
+    "tiempoFijo": 6,
+    "tiempoVariablePorUnidad": 8
+  },
+  {
+    "id": 1007,
+    "descripcion": "Cableado interno",
+    "departamento": "Electricidad",
+    "costePorMinuto": 0.85,
+    "tiempoFijo": 13,
+    "tiempoVariablePorUnidad": 5
+  },
+  {
+    "id": 1008,
+    "descripcion": "Empaquetado final",
+    "departamento": "Soldadura",
+    "costePorMinuto": 0.7,
+    "tiempoFijo": 6,
+    "tiempoVariablePorUnidad": 7
+  },
+  {
+    "id": 1009,
+    "descripcion": "Aplicaci\u00f3n de silicona sellante",
+    "departamento": "Electricidad",
+    "costePorMinuto": 0.85,
+    "tiempoFijo": 6,
+    "tiempoVariablePorUnidad": 5
+  },
+  {
+    "id": 1010,
+    "descripcion": "Corte de vinilo frontal",
+    "departamento": "Soldadura",
+    "costePorMinuto": 0.7,
+    "tiempoFijo": 14,
+    "tiempoVariablePorUnidad": 7
+  },
+  {
+    "id": 1011,
+    "descripcion": "Laminado protector",
+    "departamento": "Taller",
+    "costePorMinuto": 0.6,
+    "tiempoFijo": 10,
+    "tiempoVariablePorUnidad": 9
+  },
+  {
+    "id": 1012,
+    "descripcion": "Revisi\u00f3n el\u00e9ctrica final",
+    "departamento": "Soldadura",
+    "costePorMinuto": 0.7,
+    "tiempoFijo": 8,
+    "tiempoVariablePorUnidad": 9
+  },
+  {
+    "id": 1013,
+    "descripcion": "Colocaci\u00f3n de torniller\u00eda",
+    "departamento": "Fresadora",
+    "costePorMinuto": 1.0,
+    "tiempoFijo": 15,
+    "tiempoVariablePorUnidad": 6
+  },
+  {
+    "id": 1014,
+    "descripcion": "Fijaci\u00f3n de soportes",
+    "departamento": "Montaje",
+    "costePorMinuto": 0.65,
+    "tiempoFijo": 15,
+    "tiempoVariablePorUnidad": 8
+  },
+  {
+    "id": 1015,
+    "descripcion": "Perforado de piezas",
+    "departamento": "Fresadora",
+    "costePorMinuto": 1.0,
+    "tiempoFijo": 13,
+    "tiempoVariablePorUnidad": 9
+  },
+  {
+    "id": 1016,
+    "descripcion": "Preparaci\u00f3n de superficie",
+    "departamento": "Taller",
+    "costePorMinuto": 0.6,
+    "tiempoFijo": 7,
+    "tiempoVariablePorUnidad": 6
+  },
+  {
+    "id": 1017,
+    "descripcion": "Soldadura de estructura",
+    "departamento": "Taller",
+    "costePorMinuto": 0.6,
+    "tiempoFijo": 15,
+    "tiempoVariablePorUnidad": 7
+  },
+  {
+    "id": 1018,
+    "descripcion": "Impresi\u00f3n UV frontal",
+    "departamento": "Electricidad",
+    "costePorMinuto": 0.85,
+    "tiempoFijo": 12,
+    "tiempoVariablePorUnidad": 5
+  },
+  {
+    "id": 1019,
+    "descripcion": "Ajuste de elementos m\u00f3viles",
+    "departamento": "Soldadura",
+    "costePorMinuto": 0.7,
+    "tiempoFijo": 12,
+    "tiempoVariablePorUnidad": 5
+  },
+  {
+    "id": 1020,
+    "descripcion": "Fabricaci\u00f3n caja de luz",
+    "departamento": "Taller",
+    "costePorMinuto": 0.6,
+    "tiempoFijo": 7,
+    "tiempoVariablePorUnidad": 4
+  },
+  {
+    "id": 1021,
+    "descripcion": "Pintado c\u00e1mara presurizada",
+    "departamento": "Soldadura",
+    "costePorMinuto": 0.7,
+    "tiempoFijo": 9,
+    "tiempoVariablePorUnidad": 7
+  },
+  {
+    "id": 1022,
+    "descripcion": "Conexi\u00f3n de transformador",
+    "departamento": "Taller",
+    "costePorMinuto": 0.6,
+    "tiempoFijo": 15,
+    "tiempoVariablePorUnidad": 5
+  },
+  {
+    "id": 1023,
+    "descripcion": "Grabado l\u00e1ser frontal",
+    "departamento": "Electricidad",
+    "costePorMinuto": 0.85,
+    "tiempoFijo": 10,
+    "tiempoVariablePorUnidad": 10
+  },
+  {
+    "id": 1024,
+    "descripcion": "Inspecci\u00f3n calidad",
+    "departamento": "Pintura",
+    "costePorMinuto": 0.75,
+    "tiempoFijo": 8,
+    "tiempoVariablePorUnidad": 5
+  },
+  {
+    "id": 1025,
+    "descripcion": "Revisi\u00f3n funcional",
+    "departamento": "Montaje",
+    "costePorMinuto": 0.65,
+    "tiempoFijo": 9,
+    "tiempoVariablePorUnidad": 4
+  },
+  {
+    "id": 1026,
+    "descripcion": "Preparaci\u00f3n para transporte",
+    "departamento": "Electricidad",
+    "costePorMinuto": 0.85,
+    "tiempoFijo": 13,
+    "tiempoVariablePorUnidad": 6
+  },
+  {
+    "id": 1027,
+    "descripcion": "Calibraci\u00f3n mec\u00e1nica",
+    "departamento": "Soldadura",
+    "costePorMinuto": 0.7,
+    "tiempoFijo": 14,
+    "tiempoVariablePorUnidad": 7
+  },
+  {
+    "id": 1028,
+    "descripcion": "Aplicaci\u00f3n vinilo secundario",
+    "departamento": "Electricidad",
+    "costePorMinuto": 0.85,
+    "tiempoFijo": 10,
+    "tiempoVariablePorUnidad": 8
+  },
+  {
+    "id": 1029,
+    "descripcion": "Instalaci\u00f3n sensores",
+    "departamento": "Electricidad",
+    "costePorMinuto": 0.85,
+    "tiempoFijo": 6,
+    "tiempoVariablePorUnidad": 9
+  }
+]

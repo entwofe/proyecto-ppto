@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Líneas de Presupuesto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    .volver {
+      margin-bottom: 20px;
+      display: inline-block;
+      text-decoration: none;
+      color: #1976d2;
+    }
+    .volver:hover {
+      text-decoration: underline;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-top: 10px;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+    #mensaje {
+      font-style: italic;
+      color: gray;
+    }
+    input {
+      padding: 8px;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+    button {
+      padding: 8px 16px;
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #125ca1;
+    }
+
+    /* Modal */
+    #modal-linea {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+      z-index: 10;
+      align-items: center;
+      justify-content: center;
+    }
+    #modal-linea .contenido {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      min-width: 300px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      position: relative;
+    }
+    #modal-linea .cerrar {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .acciones button {
+      margin-right: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <a class="volver" href="/">⬅️ Volver al dashboard</a>
+  <h1>📄 Líneas del presupuesto <span id="id-presupuesto"></span></h1>
+
+  <button onclick="abrirModal()">➕ Nueva línea</button>
+
+  <div id="mensaje">Cargando líneas...</div>
+  <table id="tabla-lineas" style="display:none;">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Título</th>
+        <th>Descripción</th>
+        <th>Coste total</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <!-- Modal -->
+  <div id="modal-linea">
+    <div class="contenido">
+      <span class="cerrar" onclick="cerrarModal()">✖️</span>
+      <h2>➕ Nueva línea</h2>
+      <form id="form-nueva-linea">
+        <input type="text" id="titulo" placeholder="Título" required />
+        <input type="text" id="descripcion" placeholder="Descripción" required />
+        <div class="acciones">
+          <button type="submit">Crear</button>
+          <button type="button" onclick="cerrarModal()" style="background:#ccc; color:#333;">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const idPresupuesto = params.get("id");
+
+    if (!idPresupuesto) {
+      document.body.innerHTML = "<p style='color:red;'>❌ Error: No se especificó el ID del presupuesto en la URL.</p>";
+      throw new Error("Falta id en query param");
+    }
+
+    document.getElementById("id-presupuesto").textContent = idPresupuesto;
+
+    function cargarLineas() {
+      fetch(`/api/lineas_resumen/${idPresupuesto}`)
+        .then(res => res.json())
+        .then(lineas => {
+          const tbody = document.querySelector('#tabla-lineas tbody');
+          const tabla = document.getElementById('tabla-lineas');
+          const mensaje = document.getElementById('mensaje');
+
+          tbody.innerHTML = "";
+
+          if (!lineas.length) {
+            mensaje.textContent = "Este presupuesto aún no tiene líneas creadas.";
+            tabla.style.display = "none";
+            return;
+          }
+
+          mensaje.style.display = "none";
+          tabla.style.display = "table";
+
+          lineas.forEach(l => {
+            const fila = document.createElement('tr');
+            fila.innerHTML = `
+              <td>${l.id}</td>
+              <td>${l.titulo}</td>
+              <td>${l.descripcion}</td>
+              <td>${l.costeTotal.toFixed(2)} €</td>
+              <td>
+                <a href="/linea.html?id=${l.id}&idPresupuesto=${idPresupuesto}">🔍 Ver</a>
+                <button onclick="duplicarLinea(${l.id})">📄 Duplicar</button>
+                <button onclick="eliminarLinea(${l.id})">🗑 Eliminar</button>
+              </td>
+            `;
+            tbody.appendChild(fila);
+          });
+        })
+        .catch(err => {
+          document.getElementById('mensaje').textContent = "Error al cargar líneas.";
+          console.error(err);
+        });
+    }
+
+    function abrirModal() {
+      document.getElementById('modal-linea').style.display = 'flex';
+    }
+
+    function cerrarModal() {
+      document.getElementById('modal-linea').style.display = 'none';
+      document.getElementById('form-nueva-linea').reset();
+    }
+
+    document.getElementById('form-nueva-linea').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const titulo = document.getElementById('titulo').value.trim();
+      const descripcion = document.getElementById('descripcion').value.trim();
+
+      if (!titulo || !descripcion) {
+        alert("Todos los campos son obligatorios");
+        return;
+      }
+
+      fetch('/api/lineas_presupuesto', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          idPresupuesto: parseInt(idPresupuesto),
+          titulo,
+          descripcion
+        })
+      })
+        .then(res => {
+          if (!res.ok) throw new Error("Error al guardar línea");
+          return res.json();
+        })
+        .then(() => {
+          cerrarModal();
+          cargarLineas();
+        })
+        .catch(err => {
+          alert('Error al crear línea');
+          console.error(err);
+        });
+    });
+
+    function eliminarLinea(idLinea) {
+      if (!confirm("¿Seguro que quieres eliminar esta línea?")) return;
+
+      fetch(`/api/lineas_acciones/${idLinea}`, { method: 'DELETE' })
+        .then(res => res.json())
+        .then(() => cargarLineas())
+        .catch(err => alert("Error al eliminar la línea"));
+    }
+
+    function duplicarLinea(idLinea) {
+      fetch(`/api/lineas_acciones/duplicar/${idLinea}`, { method: 'POST' })
+        .then(res => res.json())
+        .then(() => cargarLineas())
+        .catch(err => alert("Error al duplicar la línea"));
+    }
+
+    cargarLineas();
+  </script>
+</body>
+</html>

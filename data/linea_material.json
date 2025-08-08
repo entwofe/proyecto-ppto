@@ -1,0 +1,260 @@
+[
+  {
+    "id": 3000,
+    "idLineaPresupuesto": 1002,
+    "idMaterial": 17,
+    "cantidad": 3.91
+  },
+  {
+    "id": 3001,
+    "idLineaPresupuesto": 1003,
+    "idMaterial": 16,
+    "cantidad": 3.92
+  },
+  {
+    "id": 3002,
+    "idLineaPresupuesto": 1002,
+    "idMaterial": 17,
+    "cantidad": 0.73
+  },
+  {
+    "id": 3003,
+    "idLineaPresupuesto": 1003,
+    "idMaterial": 18,
+    "cantidad": 2.92
+  },
+  {
+    "id": 3004,
+    "idLineaPresupuesto": 1002,
+    "idMaterial": 3,
+    "cantidad": 4.79
+  },
+  {
+    "id": 3005,
+    "idLineaPresupuesto": 1003,
+    "idMaterial": 11,
+    "cantidad": 0.7
+  },
+  {
+    "id": 3006,
+    "idLineaPresupuesto": 1003,
+    "idMaterial": 1,
+    "cantidad": 3.04
+  },
+  {
+    "id": 3007,
+    "idLineaPresupuesto": 1001,
+    "idMaterial": 18,
+    "cantidad": 2.11
+  },
+  {
+    "id": 3008,
+    "idLineaPresupuesto": 1001,
+    "idMaterial": 14,
+    "cantidad": 4.06
+  },
+  {
+    "id": 3009,
+    "idLineaPresupuesto": 1003,
+    "idMaterial": 11,
+    "cantidad": 2.49
+  },
+  {
+    "id": 3010,
+    "idLineaPresupuesto": 1002,
+    "idMaterial": 2,
+    "cantidad": 2.75
+  },
+  {
+    "id": 3011,
+    "idLineaPresupuesto": 1002,
+    "idMaterial": 10,
+    "cantidad": 1.31
+  },
+  {
+    "id": 3012,
+    "idLineaPresupuesto": 1002,
+    "idMaterial": 4,
+    "cantidad": 3.41
+  },
+  {
+    "id": 3013,
+    "idLineaPresupuesto": 1003,
+    "idMaterial": 9,
+    "cantidad": 1.77
+  },
+  {
+    "id": 3014,
+    "idLineaPresupuesto": 1003,
+    "idMaterial": 7,
+    "cantidad": 1.47
+  },
+  {
+    "id": 3015,
+    "idLineaPresupuesto": 1003,
+    "idMaterial": 11,
+    "cantidad": 4.92
+  },
+  {
+    "id": 3016,
+    "idLineaPresupuesto": 1002,
+    "idMaterial": 18,
+    "cantidad": 2.75
+  },
+  {
+    "id": 3017,
+    "idLineaPresupuesto": 1003,
+    "idMaterial": 7,
+    "cantidad": 1.49
+  },
+  {
+    "id": 3018,
+    "idLineaPresupuesto": 1003,
+    "idMaterial": 12,
+    "cantidad": 3.05
+  },
+  {
+    "id": 3019,
+    "idLineaPresupuesto": 1002,
+    "idMaterial": 7,
+    "cantidad": 1.66
+  },
+  {
+    "id": 3020,
+    "idLineaPresupuesto": 1003,
+    "idMaterial": 16,
+    "cantidad": 4.08
+  },
+  {
+    "id": 3021,
+    "idLineaPresupuesto": 1001,
+    "idMaterial": 10,
+    "cantidad": 2.04
+  },
+  {
+    "id": 3022,
+    "idLineaPresupuesto": 1002,
+    "idMaterial": 18,
+    "cantidad": 2.62
+  },
+  {
+    "id": 3023,
+    "idLineaPresupuesto": 1001,
+    "idMaterial": 13,
+    "cantidad": 1.74
+  },
+  {
+    "id": 3024,
+    "idLineaPresupuesto": 1001,
+    "idMaterial": 6,
+    "cantidad": 0.8
+  },
+  {
+    "id": 3025,
+    "idLineaPresupuesto": 1002,
+    "idMaterial": 5,
+    "cantidad": 1.7
+  },
+  {
+    "id": 3026,
+    "idLineaPresupuesto": 1002,
+    "idMaterial": 16,
+    "cantidad": 0.84
+  },
+  {
+    "id": 3027,
+    "idLineaPresupuesto": 1002,
+    "idMaterial": 12,
+    "cantidad": 4.07
+  },
+  {
+    "id": 3028,
+    "idLineaPresupuesto": 1003,
+    "idMaterial": 9,
+    "cantidad": 0.96
+  },
+  {
+    "id": 3029,
+    "idLineaPresupuesto": 1003,
+    "idMaterial": 18,
+    "cantidad": 3.15
+  },
+  {
+    "id": 1754674852787,
+    "idLineaPresupuesto": null,
+    "idMaterial": 4,
+    "cantidad": 12
+  },
+  {
+    "id": 1754674982643,
+    "idLineaPresupuesto": 101,
+    "idMaterial": 7,
+    "cantidad": 23
+  },
+  {
+    "id": 1754674987049,
+    "idLineaPresupuesto": 101,
+    "idMaterial": 14,
+    "cantidad": 1
+  },
+  {
+    "id": 1754674998921,
+    "idLineaPresupuesto": null,
+    "idMaterial": 7,
+    "cantidad": 23
+  },
+  {
+    "id": 1754675681190,
+    "idLineaPresupuesto": 101,
+    "idMaterial": 7,
+    "cantidad": 1
+  },
+  {
+    "id": 1754676141755,
+    "idLineaPresupuesto": 101,
+    "idMaterial": 9,
+    "cantidad": 4
+  },
+  {
+    "id": 1754676149180,
+    "idLineaPresupuesto": 101,
+    "idMaterial": 8,
+    "cantidad": 444
+  },
+  {
+    "id": 1754676795803,
+    "idLineaPresupuesto": 1,
+    "idMaterial": 15,
+    "cantidad": 33
+  },
+  {
+    "id": 1754676844762,
+    "idLineaPresupuesto": 3,
+    "idMaterial": 14,
+    "cantidad": 44
+  },
+  {
+    "id": 1754676899617,
+    "idLineaPresupuesto": 3,
+    "idMaterial": 15,
+    "cantidad": 66
+  },
+  {
+    "id": 1754681202985,
+    "idLineaPresupuesto": 1,
+    "idMaterial": 6,
+    "cantidad": 4444
+  },
+  {
+    "id": 1754681397366,
+    "idLineaPresupuesto": 1754681098006,
+    "idMaterial": 5,
+    "cantidad": 111
+  },
+  {
+    "id": 1754681408326,
+    "idLineaPresupuesto": 1754681098006,
+    "idMaterial": 9,
+    "cantidad": 123
+  }
+]

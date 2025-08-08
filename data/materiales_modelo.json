@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "categoria": "Pl\u00e1sticos",
+    "nombre": "Metacrilato blanco 3mm",
+    "unidadMedida": "m2",
+    "costeUnitario": 25.97
+  },
+  {
+    "id": 2,
+    "categoria": "Pl\u00e1sticos",
+    "nombre": "PVC espumado 10mm",
+    "unidadMedida": "m2",
+    "costeUnitario": 8.79
+  },
+  {
+    "id": 3,
+    "categoria": "Pl\u00e1sticos",
+    "nombre": "Acr\u00edlico transparente 5mm",
+    "unidadMedida": "m2",
+    "costeUnitario": 4.97
+  },
+  {
+    "id": 4,
+    "categoria": "Metales",
+    "nombre": "Aluminio anodizado 2mm",
+    "unidadMedida": "m2",
+    "costeUnitario": 16.88
+  },
+  {
+    "id": 5,
+    "categoria": "Metales",
+    "nombre": "Acero inoxidable 1mm",
+    "unidadMedida": "m2",
+    "costeUnitario": 30.81
+  },
+  {
+    "id": 6,
+    "categoria": "Metales",
+    "nombre": "Chapa galvanizada 1.5mm",
+    "unidadMedida": "m2",
+    "costeUnitario": 32.45
+  },
+  {
+    "id": 7,
+    "categoria": "Maderas",
+    "nombre": "MDF 10mm",
+    "unidadMedida": "m2",
+    "costeUnitario": 14.44
+  },
+  {
+    "id": 8,
+    "categoria": "Maderas",
+    "nombre": "Contrachapado marino 15mm",
+    "unidadMedida": "m2",
+    "costeUnitario": 37.01
+  },
+  {
+    "id": 9,
+    "categoria": "Maderas",
+    "nombre": "Tablero OSB 18mm",
+    "unidadMedida": "m2",
+    "costeUnitario": 34.46
+  },
+  {
+    "id": 10,
+    "categoria": "Vinilos",
+    "nombre": "Vinilo polim\u00e9rico blanco",
+    "unidadMedida": "m2",
+    "costeUnitario": 30.3
+  },
+  {
+    "id": 11,
+    "categoria": "Vinilos",
+    "nombre": "Vinilo transparente brillante",
+    "unidadMedida": "m2",
+    "costeUnitario": 25.14
+  },
+  {
+    "id": 12,
+    "categoria": "Vinilos",
+    "nombre": "Vinilo microperforado",
+    "unidadMedida": "m2",
+    "costeUnitario": 11.54
+  },
+  {
+    "id": 13,
+    "categoria": "Iluminaci\u00f3n",
+    "nombre": "Tira LED 12V",
+    "unidadMedida": "m2",
+    "costeUnitario": 39.32
+  },
+  {
+    "id": 14,
+    "categoria": "Iluminaci\u00f3n",
+    "nombre": "Transformador 24V",
+    "unidadMedida": "m2",
+    "costeUnitario": 19.61
+  },
+  {
+    "id": 15,
+    "categoria": "Iluminaci\u00f3n",
+    "nombre": "Conector r\u00e1pido LED",
+    "unidadMedida": "m2",
+    "costeUnitario": 17.52
+  },
+  {
+    "id": 16,
+    "categoria": "Torniller\u00eda",
+    "nombre": "Tornillo DIN 7982",
+    "unidadMedida": "unidad",
+    "costeUnitario": 4.41
+  },
+  {
+    "id": 17,
+    "categoria": "Torniller\u00eda",
+    "nombre": "Taco nylon 6mm",
+    "unidadMedida": "m2",
+    "costeUnitario": 12.87
+  },
+  {
+    "id": 18,
+    "categoria": "Torniller\u00eda",
+    "nombre": "Remache ciego aluminio",
+    "unidadMedida": "unidad",
+    "costeUnitario": 19.45
+  }
+]

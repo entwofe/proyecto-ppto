@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard de Presupuestos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+    }
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+    form {
+      margin-bottom: 30px;
+    }
+    select, button {
+      padding: 10px;
+      margin-right: 10px;
+    }
+    button {
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #125ca1;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+    a {
+      color: #1976d2;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📊 Dashboard de Presupuestos</h1>
+
+  <h2>➕ Crear nuevo presupuesto</h2>
+  <form id="form-nuevo-presupuesto">
+    <select id="select-cliente" required>
+      <option value="">-- Selecciona un cliente --</option>
+    </select>
+    <button type="submit">Crear presupuesto</button>
+  </form>
+
+  <table id="tabla-presupuestos">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Cliente</th>
+        <th>Fecha</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    // Cargar presupuestos + clientes y mostrar tabla
+    Promise.all([
+      fetch('/api/presupuestos').then(res => res.json()),
+      fetch('/api/clientes').then(res => res.json())
+    ])
+    .then(([presupuestos, clientes]) => {
+      const tbody = document.querySelector('#tabla-presupuestos tbody');
+      presupuestos.forEach(p => {
+        const cliente = clientes.find(c => c.id === p.idCliente);
+        const nombreCliente = cliente ? cliente.nombre : 'Desconocido';
+
+        const fila = document.createElement('tr');
+        fila.innerHTML = `
+          <td>${p.id}</td>
+          <td>${nombreCliente}</td>
+          <td>${p.fecha}</td>
+          <td>${p.estado}</td>
+          <td><a href="/lineas.html?id=${p.id}">Ver líneas</a></td>
+        `;
+        tbody.appendChild(fila);
+      });
+    });
+
+    // Crear nuevo presupuesto
+    document.getElementById('form-nuevo-presupuesto').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const idCliente = parseInt(document.getElementById('select-cliente').value);
+      if (!idCliente) return alert("Selecciona un cliente");
+
+      fetch('/api/presupuestos', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ idCliente })
+      })
+        .then(res => res.json())
+        .then(() => location.reload())
+        .catch(err => alert("Error al crear presupuesto"));
+    });
+
+    // Cargar clientes para el selector
+    fetch('/api/clientes')
+      .then(res => res.json())
+      .then(clientes => {
+        const select = document.getElementById('select-cliente');
+        clientes.forEach(c => {
+          const option = document.createElement('option');
+          option.value = c.id;
+          option.textContent = c.nombre;
+          select.appendChild(option);
+        });
+      });
+  </script>
+
+</body>
+</html>

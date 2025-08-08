@@ -1,0 +1,20 @@
+# Node
+node_modules/
+npm-debug.log*
+pnpm-lock.yaml
+yarn.lock
+
+# OS/IDE
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Builds
+dist/
+coverage/
+
+# Datos temporales (ajusta si NO quieres ignorarlos)
+data/*.tmp.json
+
+# Entornos (si existiera)
+.env

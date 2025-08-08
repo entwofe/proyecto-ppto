@@ -1,0 +1,311 @@
+[
+  {
+    "id": 2000,
+    "idLineaPresupuesto": 1002,
+    "departamento": "Taller",
+    "costePorMinuto": 0.6,
+    "descripcion": "Montaje de estructura metálica base",
+    "tiempoFijo": 20,
+    "tiempoVariablePorUnidad": 4,
+    "unidades": 1
+  },
+  {
+    "id": 2001,
+    "idLineaPresupuesto": 1003,
+    "departamento": "Taller",
+    "costePorMinuto": 0.6,
+    "descripcion": "Soldadura de soportes laterales",
+    "tiempoFijo": 6,
+    "tiempoVariablePorUnidad": 10,
+    "unidades": 4
+  },
+  {
+    "id": 2002,
+    "idLineaPresupuesto": 1001,
+    "departamento": "Fresadora",
+    "costePorMinuto": 1,
+    "descripcion": "Corte CNC de placas de metacrilato",
+    "tiempoFijo": 13,
+    "tiempoVariablePorUnidad": 8,
+    "unidades": 1
+  },
+  {
+    "id": 2003,
+    "idLineaPresupuesto": 1002,
+    "departamento": "Pintura",
+    "costePorMinuto": 0.75,
+    "descripcion": "Pintado con esmalte acrílico",
+    "tiempoFijo": 8,
+    "tiempoVariablePorUnidad": 6,
+    "unidades": 4
+  },
+  {
+    "id": 2004,
+    "idLineaPresupuesto": 1003,
+    "departamento": "Soldadura",
+    "costePorMinuto": 0.7,
+    "descripcion": "Instalación de LED interior",
+    "tiempoFijo": 10,
+    "tiempoVariablePorUnidad": 5,
+    "unidades": 1
+  },
+  {
+    "id": 2005,
+    "idLineaPresupuesto": 1002,
+    "departamento": "Montaje",
+    "costePorMinuto": 0.65,
+    "descripcion": "Conexión de transformador",
+    "tiempoFijo": 20,
+    "tiempoVariablePorUnidad": 3,
+    "unidades": 3
+  },
+  {
+    "id": 2006,
+    "idLineaPresupuesto": 1001,
+    "departamento": "Electricidad",
+    "costePorMinuto": 0.85,
+    "descripcion": "Impresión de vinilo decorativo",
+    "tiempoFijo": 19,
+    "tiempoVariablePorUnidad": 6,
+    "unidades": 4
+  },
+  {
+    "id": 2007,
+    "idLineaPresupuesto": 1001,
+    "departamento": "Fresadora",
+    "costePorMinuto": 1,
+    "descripcion": "Aplicación de vinilo sobre base",
+    "tiempoFijo": 12,
+    "tiempoVariablePorUnidad": 10,
+    "unidades": 4
+  },
+  {
+    "id": 2008,
+    "idLineaPresupuesto": 1003,
+    "departamento": "Montaje",
+    "costePorMinuto": 0.65,
+    "descripcion": "Montaje de letras corpóreas",
+    "tiempoFijo": 6,
+    "tiempoVariablePorUnidad": 9,
+    "unidades": 4
+  },
+  {
+    "id": 2009,
+    "idLineaPresupuesto": 1003,
+    "departamento": "Taller",
+    "costePorMinuto": 0.6,
+    "descripcion": "Instalación de soportes de anclaje",
+    "tiempoFijo": 13,
+    "tiempoVariablePorUnidad": 8,
+    "unidades": 5
+  },
+  {
+    "id": 2010,
+    "idLineaPresupuesto": 1003,
+    "departamento": "Soldadura",
+    "costePorMinuto": 0.7,
+    "descripcion": "Ajuste de elementos móviles",
+    "tiempoFijo": 10,
+    "tiempoVariablePorUnidad": 8,
+    "unidades": 2
+  },
+  {
+    "id": 2011,
+    "idLineaPresupuesto": 1002,
+    "departamento": "Soldadura",
+    "costePorMinuto": 0.7,
+    "descripcion": "Montaje de perfilería de aluminio",
+    "tiempoFijo": 15,
+    "tiempoVariablePorUnidad": 10,
+    "unidades": 1
+  },
+  {
+    "id": 2012,
+    "idLineaPresupuesto": 1003,
+    "departamento": "Taller",
+    "costePorMinuto": 0.6,
+    "descripcion": "Pintado en cámara presurizada",
+    "tiempoFijo": 11,
+    "tiempoVariablePorUnidad": 7,
+    "unidades": 4
+  },
+  {
+    "id": 2013,
+    "idLineaPresupuesto": 1002,
+    "departamento": "Pintura",
+    "costePorMinuto": 0.75,
+    "descripcion": "Prueba de funcionamiento eléctrico",
+    "tiempoFijo": 5,
+    "tiempoVariablePorUnidad": 8,
+    "unidades": 2
+  },
+  {
+    "id": 2014,
+    "idLineaPresupuesto": 1001,
+    "departamento": "Taller",
+    "costePorMinuto": 0.6,
+    "descripcion": "Corte de perfiles a medida",
+    "tiempoFijo": 13,
+    "tiempoVariablePorUnidad": 4,
+    "unidades": 3
+  },
+  {
+    "id": 2015,
+    "idLineaPresupuesto": 1001,
+    "departamento": "Soldadura",
+    "costePorMinuto": 0.7,
+    "descripcion": "Empaquetado y protección final",
+    "tiempoFijo": 13,
+    "tiempoVariablePorUnidad": 5,
+    "unidades": 5
+  },
+  {
+    "id": 2016,
+    "idLineaPresupuesto": 1001,
+    "departamento": "Pintura",
+    "costePorMinuto": 0.75,
+    "descripcion": "Fabricación de caja de luz",
+    "tiempoFijo": 10,
+    "tiempoVariablePorUnidad": 3,
+    "unidades": 2
+  },
+  {
+    "id": 2017,
+    "idLineaPresupuesto": 1002,
+    "departamento": "Taller",
+    "costePorMinuto": 0.6,
+    "descripcion": "Montaje de marco frontal",
+    "tiempoFijo": 14,
+    "tiempoVariablePorUnidad": 9,
+    "unidades": 2
+  },
+  {
+    "id": 2018,
+    "idLineaPresupuesto": 1001,
+    "departamento": "Montaje",
+    "costePorMinuto": 0.65,
+    "descripcion": "Limpieza y acabado",
+    "tiempoFijo": 11,
+    "tiempoVariablePorUnidad": 7,
+    "unidades": 3
+  },
+  {
+    "id": 2019,
+    "idLineaPresupuesto": 1002,
+    "departamento": "Electricidad",
+    "costePorMinuto": 0.85,
+    "descripcion": "Grabado láser de logo",
+    "tiempoFijo": 19,
+    "tiempoVariablePorUnidad": 3,
+    "unidades": 1
+  },
+  {
+    "id": 2020,
+    "idLineaPresupuesto": 1001,
+    "departamento": "Soldadura",
+    "costePorMinuto": 0.7,
+    "descripcion": "Ajuste mecánico de tornillería",
+    "tiempoFijo": 19,
+    "tiempoVariablePorUnidad": 9,
+    "unidades": 4
+  },
+  {
+    "id": 2021,
+    "idLineaPresupuesto": 1002,
+    "departamento": "Taller",
+    "costePorMinuto": 0.6,
+    "descripcion": "Revisión de cableado",
+    "tiempoFijo": 13,
+    "tiempoVariablePorUnidad": 5,
+    "unidades": 2
+  },
+  {
+    "id": 2022,
+    "idLineaPresupuesto": 1003,
+    "departamento": "Fresadora",
+    "costePorMinuto": 1,
+    "descripcion": "Instalación de conectores",
+    "tiempoFijo": 13,
+    "tiempoVariablePorUnidad": 5,
+    "unidades": 3
+  },
+  {
+    "id": 2023,
+    "idLineaPresupuesto": 1001,
+    "departamento": "Soldadura",
+    "costePorMinuto": 0.7,
+    "descripcion": "Corte de vinilo",
+    "tiempoFijo": 14,
+    "tiempoVariablePorUnidad": 6,
+    "unidades": 4
+  },
+  {
+    "id": 2024,
+    "idLineaPresupuesto": 1003,
+    "departamento": "Electricidad",
+    "costePorMinuto": 0.85,
+    "descripcion": "Laminado de impresión UV",
+    "tiempoFijo": 9,
+    "tiempoVariablePorUnidad": 5,
+    "unidades": 1
+  },
+  {
+    "id": 2025,
+    "idLineaPresupuesto": 1002,
+    "departamento": "Soldadura",
+    "costePorMinuto": 0.7,
+    "descripcion": "Instalación de sensores",
+    "tiempoFijo": 20,
+    "tiempoVariablePorUnidad": 6,
+    "unidades": 3
+  },
+  {
+    "id": 2026,
+    "idLineaPresupuesto": 1003,
+    "departamento": "Pintura",
+    "costePorMinuto": 0.75,
+    "descripcion": "Calibración del conjunto",
+    "tiempoFijo": 13,
+    "tiempoVariablePorUnidad": 9,
+    "unidades": 4
+  },
+  {
+    "id": 2027,
+    "idLineaPresupuesto": 1002,
+    "departamento": "Pintura",
+    "costePorMinuto": 0.75,
+    "descripcion": "Aplicación de adhesivo estructural",
+    "tiempoFijo": 16,
+    "tiempoVariablePorUnidad": 9,
+    "unidades": 4
+  },
+  {
+    "id": 2028,
+    "idLineaPresupuesto": 1002,
+    "departamento": "Electricidad",
+    "costePorMinuto": 0.85,
+    "descripcion": "Corte con guillotina industrial",
+    "tiempoFijo": 11,
+    "tiempoVariablePorUnidad": 4,
+    "unidades": 1
+  },
+  {
+    "id": 2029,
+    "idLineaPresupuesto": 1002,
+    "departamento": "Taller",
+    "costePorMinuto": 0.6,
+    "descripcion": "Revisión final de calidad",
+    "tiempoFijo": 10,
+    "tiempoVariablePorUnidad": 8,
+    "unidades": 1
+  },
+  {
+    "id": 1754675022222,
+    "idLineaPresupuesto": 101,
+    "descripcion": "bailar",
+    "tiempoFijo": 11,
+    "tiempoVariablePorUnidad": 11,
+    "unidades": 3,
+    "departamento": "Soldadura"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 101,
+    "idCliente": 1,
+    "fecha": "2025-08-08",
+    "estado": "en edición"
+  },
+  {
+    "id": 102,
+    "idCliente": 2,
+    "fecha": "2025-08-08",
+    "estado": "aceptado"
+  },
+  {
+    "id": 1754678444916,
+    "idCliente": 1,
+    "fecha": "2025-08-08",
+    "estado": "en edición"
+  },
+  {
+    "id": 1754681086107,
+    "idCliente": 3,
+    "fecha": "2025-08-08",
+    "estado": "en edición"
+  }
+]
